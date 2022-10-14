@@ -28,9 +28,12 @@
 @testable import Numero
 import XCTest
 
-func testConversionForTwo() {
-  let result = converter.convert(2)
-    print("aaa")
-    print("caasdazzzzzz")
-  XCTAssertEqual(result, "II", "Conversion for 2 is incorrect")
+
+final class Test: XCTestCase {
+    func testConversionForTwo() {
+        let converter = Converter()
+        let result = converter.convert(2)
+        XCTAssertEqual(result, "II", "Conversion for 2 is incorrect")
+    }
+
 }
